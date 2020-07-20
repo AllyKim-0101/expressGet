@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1>Welcome to Ally's express practice homepage</h1>
+<!-- // ejs is embeded html with js anything in <%= %> will be treated as js -->
+<!-- <%= %> will show the outcome in html as string or number but
+<% %> will be used without = sign when using logic statements such as 
+if or loop as these are not meant to show in HTML -->
+<!-- every sigle line of js statement should be wrapped by <% %> -->
+<p>You fall in love with: <%= thingVar.toUpperCase() %> </p>
+<% if(thingVar.toLowerCase()==="ally") { %>
+<p>Good choice! Ally is the best</p>
+<% } else { %>
+<p>Bad choice, you should have typed ally!</p>
+<% } %>
+<%- include("partials/footer.ejs") %>
